@@ -1,0 +1,85 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 2rem;
+}
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+.esquerda {
+  flex: 1;
+  box-shadow: 3px 0px 0px 0px #fff;
+}
+.direita {
+  margin: 0 20px;
+}
+
+.lista-de-contatos ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.lista-de-contatos ul li {
+  font-size: 1.5rem;
+  border-radius: 15px;
+  padding: 2%;
+  margin: 10px;
+  min-width: 200px;
+  background-color: #efefef;
+  border: 1px solid #adadad;
+  -webkit-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+  color: #000;
+}
+
+form {
+  font-size: 1.3rem;
+}
+form input {
+  margin: 0 0 15px 0px;
+  border: none;
+  height: 3rem;
+  width: 300px;
+  padding: 8px;
+  background-color: transparent;
+  box-shadow: 0px 1px 0px 0px #ededed;
+}
+
+.formulario-contato {
+  display: table-caption;
+}
+
+.btn-logout {
+  position: absolute;
+  right: 10px;
+  top: 4%;
+}
+.btn-criar {
+  color: #000;
+  border-radius: 8px;
+  border: 1px solid #21354747;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 10%;
+  height: 4rem;
+  width: 200px;
+}
+.btn-criar:hover {
+  border-color: #646cff;
+  transform: scale(1.1);
+  box-shadow: 1px 2px 2px #213547;
+  transition: all ease-in-out 0.2s;
+}
