@@ -1,7 +1,7 @@
 const users = [
-  { username: 'sousair', password: '123456' },
-  { username: 'maria', password: 'abcdef' },
-  { username: 'pedro', password: 'qwerty' },
+  { username: "sousair", password: "123456" },
+  { username: "admin", password: "agenciacocrie" },
+  { username: "igor", password: "odeiotd" },
 ];
 
 export function authenticate(username, password) {

@@ -3,9 +3,35 @@
   height: 100vh;
   margin: 2rem;
 }
+
+.tela-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.logo-home {
+  position: absolute;
+  bottom: 5%;
+}
+.logo-home img {
+  width: 300px;
+}
+
+.tela-login form {
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 h2 {
   font-size: 2em;
-  text-align: center;
+  margin-bottom: 15px;
 }
 
 .container {
@@ -23,21 +49,28 @@ h2 {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: start;
 }
 .lista-de-contatos ul li {
   font-size: 1.5rem;
   border-radius: 15px;
   padding: 2%;
   margin: 10px;
-  min-width: 200px;
+  min-width: 30vw;
+  width: 350px;
+  min-height: 30vh;
   background-color: #efefef;
   border: 1px solid #adadad;
   -webkit-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
   color: #000;
+}
+.lista-de-contatos ul li button {
+  position: relative;
+  width: 100px;
+  bottom: -15px;
+  left: 50px;
 }
 
 form {
@@ -59,10 +92,37 @@ form input {
 
 .btn-logout {
   position: absolute;
-  right: 10px;
-  top: 4%;
+  left: 1%;
+  top: 1%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url(/src/assets/cocrie.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
-.btn-criar {
+.btn-logout:hover {
+  background-image: url(/src//assets/cocrie-pisca.png);
+  box-shadow: none;
+  transform: scale(0.9);
+  .texto-sair {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    font-size: 18px;
+    color: #fff;
+  }
+}
+.texto-sair {
+  display: none;
+}
+
+.btn-criar,
+.btn-entrar {
   color: #000;
   border-radius: 8px;
   border: 1px solid #21354747;
@@ -73,11 +133,12 @@ form input {
   background-color: #fff;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin: 10%;
+  margin: 10% 0;
   height: 4rem;
   width: 200px;
 }
-.btn-criar:hover {
+.btn-criar:hover,
+.btn-entrar:hover {
   border-color: #646cff;
   transform: scale(1.1);
   box-shadow: 1px 2px 2px #213547;
