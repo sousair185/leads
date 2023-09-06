@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { authenticate } from "./db";
 import Cookies from "js-cookie";
 import Home from "./Home";
+import Game from "./Game";
 
 import cocrielogo from "./assets/cocrie-completa.png";
 
@@ -45,27 +46,32 @@ function LoginScreen() {
       <div className="logo-home">
         <img src={cocrielogo} alt="logo-cocrie" />
       </div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nome de usuário:
-          <input
-            type="text"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Senha:
-          <input
-            type="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-        </label>
-        <br />
-        <input className="btn-entrar" type="submit" value="Entrar" />
-      </form>
+      <div className="formulario">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Nome de usuário:
+            <input
+              type="text"
+              value={username}
+              onChange={(event) => setUsername(event.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Senha:
+            <input
+              type="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
+          </label>
+          <br />
+          <input className="btn-entrar" type="submit" value="Entrar" />
+        </form>
+      </div>
+      <div className="game">
+        <Game />
+      </div>
     </div>
   );
 }

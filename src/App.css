@@ -6,6 +6,7 @@
 
 .tela-login {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -14,7 +15,8 @@
 
 .logo-home {
   position: absolute;
-  bottom: 5%;
+  top: 2%;
+  left: 1%;
 }
 .logo-home img {
   width: 300px;
@@ -22,6 +24,13 @@
 
 .tela-login form {
   width: 300px;
+}
+
+.gameframe{
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transform: translateZ(0px);
 }
 
 h1 {
