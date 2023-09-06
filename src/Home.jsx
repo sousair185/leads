@@ -52,7 +52,9 @@ function Home({ onLogout }) {
       const data = snapshot.val();
       if (data) {
         setContacts(
-          Object.entries(data).map(([id, contact]) => ({ ...contact, id }))
+          Object.entries(data)
+            .map(([id, contact]) => ({ ...contact, id }))
+            .sort((a, b) => new Date(a.contactDate) - new Date(b.contactDate))
         );
       }
     });
@@ -121,7 +123,14 @@ function Home({ onLogout }) {
           <div className="lista-de-contatos">
             <ul>
               {contacts.map((contact) => (
-                <li key={contact.id}>
+                <li
+                  key={contact.id}
+                  className={
+                    new Date(contact.contactDate) < new Date()
+                      ? "data-passada"
+                      : "data-futura"
+                  }
+                >
                   <p>Nome: {contact.name}</p>
                   <p>Telefone: {contact.phone}</p>
                   <p>Email: {contact.email}</p>
@@ -145,12 +154,14 @@ function Home({ onLogout }) {
                         }
                       )}
                   </p>
-                  <button onClick={() => handleEditContact(contact)}>
-                    Editar
-                  </button>
-                  <button onClick={() => handleDeleteContact(contact.id)}>
-                    Excluir
-                  </button>
+                  <div className="btn-edicao">
+                    <button onClick={() => handleEditContact(contact)}>
+                      Editar
+                    </button>
+                    <button onClick={() => handleDeleteContact(contact.id)}>
+                      Excluir
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>

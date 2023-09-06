@@ -56,21 +56,33 @@ h2 {
   border-radius: 15px;
   padding: 2%;
   margin: 10px;
-  min-width: 30vw;
-  width: 350px;
+  min-width: 250px;
+  width: 300px;
   min-height: 30vh;
-  background-color: #efefef;
   border: 1px solid #adadad;
   -webkit-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
-  color: #000;
 }
 .lista-de-contatos ul li button {
+  width: 45%;
+}
+.btn-edicao {
   position: relative;
-  width: 100px;
-  bottom: -15px;
-  left: 50px;
+  bottom: -5%;
+}
+
+.data-passada {
+  background-color: #515151;
+}
+.data-futura {
+  color: #fff;
+  background: rgb(63, 169, 251);
+  background: linear-gradient(
+    142deg,
+    rgba(63, 169, 251, 1) 0%,
+    rgba(13, 33, 91, 1) 100%
+  );
 }
 
 form {
@@ -92,7 +104,7 @@ form input {
 
 .btn-logout {
   position: absolute;
-  left: 1%;
+  right: 5%;
   top: 1%;
   width: 50px;
   height: 50px;
@@ -110,15 +122,15 @@ form input {
   transform: scale(0.9);
   .texto-sair {
     display: block;
-    position: absolute;
-    top: 10%;
-    left: 100%;
-    font-size: 18px;
-    color: #fff;
   }
 }
 .texto-sair {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  font-size: 18px;
+  color: #fff;
 }
 
 .btn-criar,
